@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Social Event Planner</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="javascripts/admin.js" defer></script>
+  <script src="https://kit.fontawesome.com/4a6e6f5cc7.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload="loadUserInfo();">
+  <div>
+    <div id="home">
+      <header>
+        <h1><a href="/index.html"><span style="color:white">Social Event Planner</span></a></h1>
+        <div class="buttons">
+          <div>
+            <button class="login button" onclick="location.href='/index.html';">Home Page</button>
+            <div class="dropdown">
+              <button class="dropbtn login button">Menu</button>
+              <div class="dropdown-content">
+                <a href="/profile.html">Profile</a>
+                <a href="/admin.html">Manage Users</a>
+                <a href="/eventtable.html">Manage Events</a>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="login button" onclick="userLogOut();">Log Out</button>
+        </div>
+      </header>
+
+      <div class = "centered">
+          <h2>Your Profile</h2>
+      </div>
+
+      <div class="innerlog, centered">
+        <p>First Name: <textarea id="sign-first-name"></textarea></p>
+        <p>Last Name: <textarea id="sign-last-name"></textarea></p>
+        <p>Email Address: <textarea id="sign-email"></textarea></p>
+        <p>Phone Number: <textarea id="sign-phone"></textarea></p>
+        <button onclick="updateUserInfo()" class="signinpage button">Update Details</button>
+        <div class="alert" id="update-alert"></div>
+      </div>
+
+      <!--CHANGE PASSWORD SECTION-->
+        <div class="profilecontainer, centered">
+          <div>
+            <div class="profileHeader">
+              <h2>Password</h2>
+            </div>
+
+            <div class="innerprofile">
+                <p>New Password: <input id="sign-password" type="password"></p>
+                <p>Confirm Password: <input id="sign-confirm-password" type="password"></p>
+                <button onclick="changePassword()" class="signinpage button">Change Password</button>
+                <div class="alert" id="password-alert"></div>
+            </div>
+          </div>
+        </div>
+
+      <footer>
+        <p><a href="/about.html">About Us</a></p>
+        <p><a href="/contact.html">Contact Us</a></p>
+        <p><a href="/faq.html">FAQ</a></p>
+        <p class="trademark">&copy; Social Event Planner 2022</p>
+      </footer>
+    </div>
+  </div>
+</body>
+
+</html>

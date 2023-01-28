@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Social Event Planner</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="javascripts/index.js" defer></script>
+  <script src="javascripts/admin.js" defer></script>
+  <script src="javascripts/login.js" defer></script>
+  <script src="https://kit.fontawesome.com/4a6e6f5cc7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="index-body" onload="loggedIn()">
+  <div id="app" hidden>
+    <div id="home">
+        <header id="index-header">
+        <h1>Social Event Planner</h1>
+        <!-- LOGIN AND SIGNUP BUTTONS -->
+        <div class="buttons">
+          <div id="sign-log">
+            <button type="submit" class="login button" onclick="location.href='/login.html';">Log In</button>
+            <button type="submit" class="login button" onclick="location.href='/signup.html';">Sign Up</button>
+          </div>
+
+          <div id = "admin_options">
+            <div class="dropdown">
+              <button class="dropbtn login button">Menu</button>
+              <div class="dropdown-content">
+                <a href="/profile.html">Profile</a>
+                <a href="/admin.html">Manage Users</a>
+                <a href="/eventtable.html">Manage Events</a>
+              </div>
+            </div>
+          </div>
+
+          <div id = "normal_options">
+            <button id="profile" type="submit" class="login button" onclick="location.href='/profile.html';">Profile</button>
+          </div>
+          <button id="logout" onclick="userLogOut();" type="submit" class="login button">Log Out</button>
+        </div>
+      </header>
+
+      <!-- EVENTS LIST SIDEBAR -->
+      <div class="events_sidebar overlap">
+        <div class="sidebar_header">
+          <span class="sidebar_title">EVENTS</span>
+          <span class="close_button" v-on:click="collapse_sidebar()">&times;</span>
+          <div class="sidebar_date"></div>
+        </div>
+        <div class="sidebar_contents">
+        </div>
+      </div>
+
+      <div class="content">
+
+        <!-- CREATE EVENT BOX -->
+        <div id="create_event">
+          <button id="create_event_button" class="create_event_buttons button"
+            v-on:click="show_create_event()">Create Event +</button>
+          <div id="create_event_box" class="overlap" style="display:none">
+            <div class="create_event_header">
+              <h2>EVENT DETAILS</h2>
+              <div class="close_button" v-on:click="close_create_event()">&times;</div>
+            </div>
+            <form id="create-event-form" v-on:submit="create_event()">
+              <table id="create_event_table" class="centered">
+                <tr>
+                  <td>EVENT NAME</td>
+                  <td><input id="event-name" type="text" style="width:100%" required></td>
+                </tr>
+                <tr>
+                  <td>DESCRIPTION</td>
+                  <td><input id="event-description" style="width:100%" type="text"></td>
+                </tr>
+                <tr>
+                  <td>START DATE</td>
+                  <td><input id="event-date" type="date" required></td>
+                </tr>
+                <tr>
+                  <td>END DATE</td>
+                  <td><input id="event-date-end" type="date" required></td>
+                </tr>
+                <tr>
+                  <td>START TIME</td>
+                  <td><input id="event-start-time" type="time" required></td>
+                </tr>
+                <tr>
+                  <td>END TIME</td>
+                  <td><input id="event-end-time" type="time" required></td>
+                </tr>
+                <tr>
+                  <td>LOCATION</td>
+                  <td><input id="event-location" type="text" style="width:100%" required></td>
+                </tr>
+                <tr>
+                  <td>GUESTS</td>
+                  <td><input id="event-attendees" type="email" style="width:100%" multiple></td>
+                </tr>
+              </table>
+            <button type="submit" class="create_event_buttons button">Send Invitation</button>
+          </form>
+          </div>
+        </div>
+
+        <!-- EDIT EVENT BOX -->
+        <div class="edit-event">
+        </div>
+
+        <!-- INVITATION BOX -->
+        <div id="invitation">
+          <div id="invitation-box">
+            <h2 style="font-size:30px">Event successfully created! Here is the invitation link:</h2>
+            <div id="link"></div>
+            <div id="inv-button" class="button create_event_buttons" v-on:click="close_invitation()">Close</div>
+          </div>
+        </div>
+
+        <!-- CALENDAR UI -->
+        <div class="calendar-container">
+            <div class="calendar-grid calendar-header">
+              <div class="calendar-left_arrow clickable" v-on:click="update_month(-1)">&lt;</div>
+              <div class="calendar-month">{{month}}</div>
+              <div class="calendar-right_arrow clickable" v-on:click="update_month(1)">&gt;</div>
+              <div class="calendar-left_arrow clickable" v-on:click="update_year(-1)">&lt;</div>
+              <div class="calendar-year">{{year}}</div>
+              <div class="calendar-right_arrow clickable" v-on:click="update_year(1)">&gt;</div>
+            </div>
+
+            <div class="calendar-grid calendar-days">
+              <div class="day">S</div>
+              <div class="day">M</div>
+              <div class="day">T</div>
+              <div class="day">W</div>
+              <div class="day">T</div>
+              <div class="day">F</div>
+              <div class="day">S</div>
+            </div>
+
+            <div class="calendar-grid calendar-dates">
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <p><a href="/about.html">About Us</a></p>
+      <p><a href="/contact.html">Contact Us</a></p>
+      <p><a href="/faq.html">FAQ</a></p>
+      <p class="trademark">&copy; Social Event Planner 2022</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

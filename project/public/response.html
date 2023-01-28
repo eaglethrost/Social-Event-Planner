@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Social Event Planner</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="javascripts/response.js" defer></script>
+  <script src="https://kit.fontawesome.com/4a6e6f5cc7.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body id="response-body" onload="load_event()" hidden>
+    <div id="response-div">
+      <header style="overflow:auto">
+        <h1>Social Event Planner</h1>
+        <div class="buttons">
+          <div id="sign-log">
+            <button type="submit" class="login button" onclick="location.href='/login.html';">Log In</button>
+            <button type="submit" class="login button" onclick="location.href='/signup.html';">Sign Up</button>
+          </div>
+          <div class="dropdown">
+            <button class="dropbtn login button">Menu</button>
+            <div class="dropdown-content">
+              <a href="/profile.html">Profile</a>
+              <a href="/admin.html">Manage Users</a>
+              <a href="/eventtable.html">Manage Events</a>
+            </div>
+          <button class="login button" onclick="location.href='/index.html';">Home Page</button>
+          <button id="logout" type="submit" class="login button" onclick="userLogOut();">Log Out</button>
+        </div>
+      </header>
+
+      <div class="response-content">
+        <div id="response-event" class="response-form-container event-details">
+            <div class="create_event_header">
+                <h2>Event Name</h2>
+            </div>
+            <table id="response-event-table" class="centered">
+              <tr>
+                <td>EVENT NAME</td>
+                <td><input id="event-name" type="text" style="width:100%" required></td>
+              </tr>
+              <tr>
+                <td>DESCRIPTION</td>
+                <td><input id="event-description" style="width:100%" type="text"></td>
+              </tr>
+              <tr>
+                <td>START DATE</td>
+                <td><input id="event-date" type="date" required></td>
+              </tr>
+              <tr>
+                <td>END DATE</td>
+                <td><input id="event-date-end" type="date" required></td>
+              </tr>
+              <tr>
+                <td>START TIME</td>
+                <td><input id="event-start-time" type="time" required></td>
+              </tr>
+              <tr>
+                <td>END TIME</td>
+                <td><input id="event-end-time" type="time" required></td>
+              </tr>
+              <tr>
+                <td>LOCATION</td>
+                <td><input id="event-location" type="text" style="width:100%" required></td>
+              </tr>
+              <tr>
+                <td>GUESTS</td>
+                <td><input id="event-attendees" type="email" style="width:100%" multiple></td>
+              </tr>
+            </table>
+        </div>
+      </div>
+
+      <div class="response-content">
+        <div class="response-form-container">
+            <div class="create_event_header">
+                <h2>RESPONSE</h2>
+            </div>
+            <form id="response-form" action="#" onsubmit="submit_response();return false">
+              <table class="centered">
+                <tr>
+                  <td>FIRST NAME</td>
+                  <td><input id="first-name" type="text" required></td>
+                </tr>
+                <tr>
+                  <td>LAST NAME</td>
+                  <td><input id="last-name" type="text" required></td>
+                </tr>
+                <tr>
+                    <td>AVAILABILITY</td>
+                    <td>
+                      <select id="availability" name="availability" required>
+                        <option value="">Choose</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="TBC">TBC</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>PROPOSE NEW DATE</td>
+                    <td>
+                      <select id="propose-new-date" name="propose-new-date" required>
+                        <option value="">Choose</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                    </td>
+                </tr>
+                <tr>
+                  <td>NEW DATE</td>
+                  <td><input id="new-date" type="date"></td>
+                </tr>
+                <tr>
+                  <td>NEW START TIME</td>
+                  <td><input id="new-start-time" type="time"></td>
+                </tr>
+                <tr>
+                  <td>NEW END TIME</td>
+                  <td><input id="new-end-time" type="time"></td>
+                </tr>
+              </table>
+            <button id="use-account" class="create_event_buttons button" onclick="location.href='/login.html';">Use Account</button>
+            <button type="submit" id="submit" class="create_event_buttons button">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <footer>
+        <p><a href="/about.html">About Us</a></p>
+        <p><a href="/contact.html">Contact Us</a></p>
+        <p><a href="/faq.html">FAQ</a></p>
+        <p class="trademark">&copy; Social Event Planner 2022</p>
+       </footer>
+    </div>
+</body>
+
+</html>

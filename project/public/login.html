@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Social Event Planner Login</title>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="386121880437-ln1bcmok9f3r5r87oroq1evh6e53hggp.apps.googleusercontent.com">
+    <meta name="google-signin-plugin_name" content="APP">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="stylesheet" href="/stylesheets/login.css">
+    <script src="https://kit.fontawesome.com/4a6e6f5cc7.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="/javascripts/login.js"></script>
+  </head>
+
+  <body>
+    <div id="home">
+        <header>
+            <h1><a href="/index.html"><span style="color:white">Social Event Planner</span></a></h1>
+            <div class="buttons">
+              <div>
+                <button class="login button" onclick="location.href='/index.html';">Home Page</button>
+              </div>
+              <button id="logout" type="submit" class="login button">Log Out</button>
+            </div>
+        </header>
+
+        <section id="log-section">
+          <div class="centered logcontainer">
+              <h2>Log In</h2>
+              <p>Email:</p>
+              <input type="text" id="user">
+              <p>Password:</p>
+              <input type="password" id="password"><br>
+              <button class="loginpage button" onclick="logIn()">Log In</button>
+              <p>Sign in with Google:</p>
+              <div class="g-signin2" data-onsuccess="onSignIn"></div>
+              <p><span style="font-weight:bold">Create Account: </span></p>
+              <form action="/signup.html" method="get"><button type="submit" class="signup button">Sign Up</button></form>
+          </div>
+        </section>
+
+        <footer>
+            <p><a href="/about.html">About Us</a></p>
+            <p><a href="/contact.html">Contact Us</a></p>
+            <p><a href="/faq.html">FAQ</a></p>
+            <p class="trademark">&copy; Social Event Planner 2022</p>
+        </footer>
+    </div>
+  </body>
+</html>

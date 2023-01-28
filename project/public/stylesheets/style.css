@@ -1,0 +1,942 @@
+/* Home/Index Page */
+*
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  font: 14px sans-serif;
+  color: black;
+  margin:0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+#home
+{
+  display: flex;
+  min-height:100vh;
+  flex-direction:column;
+  height: 900px;
+}
+
+header, footer
+{
+    background-color: #00332e;
+    margin-left:0;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    padding:20px 20px 0px 20px;
+}
+
+header
+{
+  width:100%;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+  height: 30vh;
+}
+
+#index-header{
+  position: absolute;
+}
+
+footer
+{
+  box-sizing:border-box;
+  text-align: center;
+  color: white;
+  bottom: 0;
+  margin-bottom: 0;
+  position: relative;
+  width: 100%;
+  height: 20%;
+  z-index: 10;
+}
+
+#index-body * footer{
+  position: static;
+}
+
+footer p a
+{
+  color: white;
+}
+
+.trademark
+{
+  padding:0.2em;
+  font-size:1em;
+  color:white;
+  text-align: center;
+}
+
+.centered
+{
+  margin: 0 auto;
+  text-align: center;
+}
+
+.login
+{
+  float:right;
+  border-radius:10px;
+  padding:2px;
+  padding-left:15px;
+  padding-right:15px;
+  font-size:0.5em;
+  font-weight:bold;
+  position:relative;
+  bottom:40px;
+  margin:2px;
+}
+
+.buttons
+{
+  margin:15px;
+  position:relative;
+  cursor: pointer;
+}
+
+button{
+  color: black;
+  cursor: pointer;
+}
+
+.button
+{
+  background-color:#b3b3b3;
+  border:none;
+  border-radius:6px;
+  cursor: pointer;
+}
+
+.button:hover
+{
+  background-color: #8c8c8c;
+  color: black;
+}
+
+.button:active {
+  background-color: #8c8c8c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.content{
+  position: absolute;
+  width: 100%;
+  top: 30vh;
+}
+
+.create_event_header .close_button{
+  font-size: 1.5em;
+}
+
+.close_button {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 29px;
+  font-size: 35px;
+}
+
+.clickable{
+  cursor: pointer;
+}
+
+.clickable:hover{
+  margin: auto;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid;
+}
+
+#welcome-message
+{
+  display:none;
+}
+
+#admin_options
+{
+  display:none;
+}
+
+#normal_options
+{
+  display:none;
+}
+
+#radio-btn
+{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#logout
+{
+    visibility: hidden;
+}
+
+
+
+/* Login Page */
+#log-section
+{
+  /* display: none; */
+  justify-content:center;
+  align-items:center;
+}
+
+.logcontainer
+{
+  box-sizing:border-box;
+  height:700px;
+  font-size:110%;
+}
+
+.logcontainer h2
+{
+  font-size:2em;
+  text-align:center;
+  color:black;
+}
+
+.logcontainer p
+{
+  font-weight: bold;
+}
+
+.loginpage
+{
+  border-radius:10px;
+  padding:0.3em;
+  padding-left:15px;
+  padding-right:15px;
+  margin: 15px;
+  font-size:1.4em;
+  font-weight:bold;
+}
+
+#innerlog
+{
+  box-sizing:border-box;
+  padding:20px 70px 70px 70px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+  height: auto;
+  width: auto;
+  font-weight:bold;
+}
+
+#innerlog input
+{
+  width:20em;
+}
+
+#innerlog
+{
+  font-size:1.5em;
+}
+
+/* Sign up Page*/
+.signup
+{
+  border-radius:10px;
+  padding:0.3em;
+  padding-left:15px;
+  padding-right:15px;
+  margin: 0 auto;
+  font-size:1.4em;
+  font-weight:bold;
+}
+
+#sign-up-section
+{
+  justify-content:center;
+  align-items:center;
+}
+
+#signcontainer
+{
+  box-sizing:border-box;
+  height:700px;
+  overflow:scroll;
+}
+
+#innersign
+{
+  box-sizing:border-box;
+  padding-top:10px;
+  padding-left:50px;
+  padding-right:50px;
+  padding-bottom:15px;
+  border-bottom-left-radius:8px;
+  border-bottom-right-radius:8px;
+  font-weight:bold;
+}
+
+.signShadow
+{
+    box-shadow: 5px 10px 18px #888888;
+    border-radius:8px;
+    margin: 10px;
+}
+
+#signcontainer h2
+{
+  font-size:2em;
+  text-align:center;
+  color:black;
+}
+
+/* About Us /Contact Us / FAQ */
+h2 span
+{
+  padding: 10px;
+}
+
+#contact_us
+{
+  text-align: left;
+}
+
+#contact_left
+{
+  height: 700px;
+  padding: 18px;
+  text-align: left;
+  font-weight: bold;
+
+}
+
+#post-tile
+{
+  width: 100%;
+}
+
+#post-content
+{
+  margin-top: 15px;
+  width: 100%;
+  height: 400px;
+  max-height: 200px;
+  resize: both;
+  overflow: auto;
+}
+
+#about_left
+{
+  margin-top: 15px;
+}
+
+#sbutton
+{
+  display: block;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* Create Event Stuff*/
+.create_event_buttons
+{
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#create_event_box
+{
+  box-sizing: border-box;
+
+  margin: auto;
+  position: absolute;
+  left: 0; right: 0;
+
+  border: 5px solid black;
+  width: 75%;
+  max-width: 700px;
+  height: 550px;
+
+  background-color: white;
+
+  overflow: scroll;
+  text-align: center;
+}
+
+#create_event_container
+{
+  text-align: center;
+}
+
+.create_event_header{
+  height: 10%;
+  font-size: 1.5em;
+}
+
+.create_event_header > h2{
+  display: flex;
+  text-align: center;
+  justify-content:center;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+/* #create_event_table{
+  width: 100%;
+} */
+
+#index-body * table{
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+}
+
+#index-body * td{
+  overflow-y: auto;
+}
+
+input{
+  padding: 6px;
+}
+
+.inline
+{
+  display: inline-block;
+}
+
+/* EDIT EVENT */
+.edit-event-box{
+  box-sizing: border-box;
+
+  margin: auto;
+  position: absolute;
+  left: 0; right: 0;
+
+  border: 5px solid black;
+  width: 75%;
+  max-width: 700px;
+  height: 550px;
+
+  background-color: white;
+
+  overflow: scroll;
+  text-align: center;
+}
+
+.edit-event-header{
+  height: 10%;
+  font-size: 1.5em;
+}
+
+.edit-event-save{
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-right: 25px;
+  padding-left: 25px;
+  font-size: 16px;
+}
+
+.edit-event * input[type=text]{
+  width: 100%;
+}
+
+#delete-event-owner{
+  margin-right: 50px;
+}
+
+/* CALENDAR */
+.calendar-container{
+  position: relative;
+
+  border: 2px solid black;
+  width: 70%;
+  border-radius:10px;
+
+  margin: auto;
+  margin-top: 5vh;
+  overflow-y: auto;
+}
+
+.calendar{
+  position: relative;
+  width: 100%;
+}
+
+.calendar-grid{
+  display:grid;
+  grid-template-columns: repeat(7, minmax(1em, 1fr));
+    /* 'arrow month month arrow arrow year arrow'
+    'day day day day day day day'
+    'date date date date date date date'
+    'date date date date date date date'
+    'date date date date date date date'
+    'date date date date date date date'
+    'date date date date date date date'
+    'date date date date date date date'; */
+  padding: 15px;
+  gap: 10px;
+  background-color: white;
+}
+
+.calendar-grid > div{
+  display: flex;
+  align-items: center;
+	justify-content: center;
+  padding: 5px;
+  /* border: 1px solid; */
+}
+
+.calendar-header{
+  grid-template-columns: minmax(1em, 1fr) minmax(1em, 2fr) minmax(1em, 1fr) minmax(1em, 1fr) minmax(1em, 1fr) minmax(1em, 1fr) minmax(1em, 1fr);
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 20px;
+  background-color: #dcdcdc;
+  background-clip: border-box;
+}
+
+.calendar-days{
+  margin-bottom: -20px;
+  margin-top: -20px;
+}
+
+.calendar-left_arrow{
+  /* grid-area: arrow; */
+  text-align: right;
+}
+
+.calendar-right_arrow{
+  /* grid-area: arrow; */
+  text-align: left;
+}
+
+.calendar-month{
+  /* grid-area: month; */
+  grid-column-start: 2;
+  grid-column-end: 4;
+  text-align: center;
+  overflow: clip;
+}
+
+.calendar-year{
+  /* grid-area: year; */
+  text-align: center;
+}
+
+.day{
+  /* grid-area: day; */
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.date{
+  /* grid-area: date; */
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.date:hover{
+  background-color: #DCDCDC;
+  margin: auto;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+.date-selected{
+  background-color: darkgray;
+  margin: auto;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+}
+
+.overlap{
+  z-index: 9;
+}
+
+/* Events sidebar */
+.events_sidebar{
+  height: 800px;
+  width: 360px;
+
+  position: relative;
+  right: 0;
+  margin-top: 30vh;
+  margin-left: auto;
+
+  border: 1px solid;
+  border-top: 0;
+
+  background-color: white;
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  display: none;
+}
+
+.sidebar_header{
+  width: 360px;
+  height: 12%;
+  border-bottom: 1px solid;
+  font-size: 1.5rem;
+  position: relative;
+  display: table;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sidebar_title{
+  position: absolute;
+  font-weight: bold;
+
+  margin-left: 0;
+  top: 12px;
+  height: 50%;
+  left: 3%;
+  padding: 5px 0;
+
+  display: table-row;
+  text-align: center;
+}
+
+.sidebar_date{
+  position: absolute;
+  bottom: 12px;
+  left: 3%;
+  font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.sidebar_contents{
+  height: 100%;
+}
+
+.collapsible{
+  background-color: gainsboro;
+  cursor: pointer;
+
+  font-size: 1.3em;
+  font-weight: bold;
+  text-align: left;
+
+  padding-left: 3%;
+  width: 100%;
+  height: 50px;
+
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.shown_event, .collapsible:hover{
+  background-color: grey;
+}
+
+.collapsible:after{
+  content: '\002B';
+  float: right;
+  margin-right: 9px;
+}
+
+.shown_event:after{
+  content: '\2212';
+  float: right;
+  margin-right: 9px;
+}
+
+.event_box{
+  box-sizing: border-box;
+  display: none;
+
+  height: 200px;
+  width: 360px;
+  border-bottom: 1px solid;
+
+  overflow-x: hidden;
+}
+
+.event_table{
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+.event_details{
+  width: 360px;
+  height: 100px;
+  table-layout: auto;
+}
+
+.edit_event_button{
+  width: 70px;
+  position: relative;
+  margin-top: 10px;
+  left: 32%;
+}
+
+.attendees > div{
+  margin: 2px;
+}
+
+.email{
+  background-color: lightgrey;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Response.html stuff */
+.response-body
+{
+  height: 1500px;
+}
+
+.response-div{
+  height: 1500px;
+}
+
+.response-content{
+  height: 700px;
+  position: relative;
+  overflow: auto;
+}
+
+.response-form-container{
+  box-sizing: border-box;
+
+  margin: auto;
+  margin-top: 20px;
+  position: absolute;
+  left: 0; right: 0;
+
+  border: 5px solid black;
+  width: 75%;
+  max-width: 700px;
+  height: 650px;
+
+  background-color: white;
+
+  overflow: scroll;
+  text-align: center;
+}
+
+#responded_event_table{
+  width: 80%;
+  height: 80%;
+  font-size: 15px;
+}
+
+.event-details{
+  height: 700px;
+}
+
+select {
+  padding: 8px;
+}
+
+#use-account{
+  position: relative;
+  left: 25px;
+  width: 120px;
+}
+
+#submit{
+  position: relative;
+  margin-left: 100px;
+  margin-right: 10px;
+  right: 40px;
+  width: 120px;
+}
+
+/* Admin page */
+/* taken from https://www.w3schools.com/howto/howto_css_dropdown.asp */
+
+.admin-table th
+{
+  padding: 18px;
+  text-align: left;
+  font-weight: bold;
+  text-align: center;
+}
+.admin-table td
+{
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dropdown
+{
+  float: right;
+  position: relative;
+}
+
+.dropdown-content
+{
+  display: none;
+  position: absolute;
+  background-color:#b3b3b3;
+  font: 14px sans-serif;
+}
+
+.dropdown-content a
+{
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 6px 6px;
+}
+
+.dropdown-content a:hover
+{
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content
+{
+  display: inline-grid;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #8c8c8c;
+}
+
+table, th, td {
+  border:1px solid black;
+}
+
+tr:nth-child(even)
+{
+  background-color:#dddddd;
+}
+
+tr:hover
+{
+  background-color: black;
+  color: white;
+}
+
+td .button
+{
+  text-align: center;
+  margin: auto;
+  display: flex;
+  position: static;
+  font-size: 16px;
+  font-weight:bold;
+}
+
+.a_footer
+{
+  position: absolute;
+  bottom: 0;
+}
+
+.e_footer
+{
+  position: static;
+  bottom: 0;
+}
+
+/* Profile.html page */
+
+.editbtn
+{
+  font-size: 16px;
+  font-weight:bold;
+  float:right;
+  margin-right:3em;
+}
+
+#changeinfo
+{
+  visibility: hidden;
+}
+
+#p_changeinfo
+{
+  visibility: hidden;
+}
+
+textarea {
+  resize: none;
+}
+
+/* INVITATION STUFF */
+#invitation-box
+{
+  display: none;
+  box-sizing: border-box;
+
+  margin: auto;
+  position: absolute;
+  left: 0; right: 0;
+
+  border: 5px solid black;
+  width: 60%;
+  height: 300px;
+
+  background-color: white;
+
+  overflow: scroll;
+  text-align: center;
+  z-index: 10;
+}
+
+#inv-button
+{
+  position:absolute;
+  width:100px;
+  bottom:0;
+  left:0; right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#link
+{
+  font-size: 1.5em;
+  position: relative;
+}
+
+/* Event Table Page */
+
+.event-table th
+{
+  padding: 18px;
+  text-align: left;
+  font-weight: bold;
+  text-align: center;
+}
+.event-table td
+{
+  padding: 15px;
+  text-align: left;
+  font-weight: bold;
+  text-align: center;
+}
+
+#event-section
+{
+  display: none;
+}

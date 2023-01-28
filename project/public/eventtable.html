@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Social Event Planner</title>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/stylesheets/style.css">
+
+  <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+  <script src="javascripts/admin.js" defer></script>
+  <script src="https://kit.fontawesome.com/4a6e6f5cc7.js" crossorigin="anonymous"></script>
+</head>
+
+<body onload = "eventTable()">
+  <div>
+    <div id="home">
+      <header>
+        <h1><a href="/index.html"><span style="color:white">Social Event Planner</span></a></h1>
+        <div class="buttons">
+          <div>
+            <button class="login button" onclick="location.href='/index.html';">Home Page</button>
+            <div class="dropdown">
+              <button class="dropbtn login button">Menu</button>
+              <div class="dropdown-content">
+                <a href="/profile.html">Profile</a>
+                <a href="/admin.html">Manage Users</a>
+                <a href="/eventtable.html">Manage Events</a>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="login button" onclick="userLogOut();">Log Out</button>
+        </div>
+      </header>
+
+      <div class="event-table centered">
+        <h2><span>Events</span></h2>
+        <table id = "event_table">
+          <thead>
+            <tr>
+              <th>Event ID</th>
+              <th>Event Title</th>
+              <th>Event Creator</th>
+              <th>Event Description</th>
+              <th>Event Address</th>
+              <th>Date Start</th>
+              <th>Date End</th>
+              <th>Start Time</th>
+              <th>End Time</th>
+              <th>Modify Event</th>
+              <th>Delete Event</th>
+            </tr>
+          </thead>
+          <tbody>
+
+          </tbody>
+        </table>
+      </div>
+
+      <section id="event-section">
+        <div id="signcontainer" class="centered">
+            <h2>Your Event</h2>
+            <div id="innersign">
+              <p>Event Title: <textarea id="e_event_title"></textarea></p>
+              <p>Event Creator: <textarea id="e_event_creator"></textarea></p>
+              <p>Event Description: <textarea id="e_event_description"></textarea></p>
+              <p>Event Address: <textarea id="e_event_address"></textarea></p>
+              <p>Event Date Start: <textarea id="e_event_date_start"></textarea></p>
+              <p>Event Date End: <textarea id="e_event_date_end"></textarea></p>
+              <p>Event Start Time: <textarea id="e_event_start_time"></textarea></p>
+              <p>Event End Time: <textarea id="e_event_end_time"></textarea></p>
+            </div>
+            <!-- <button id = "store_e_id" class="signup button" onclick="updateEvent()">Modify</button> -->
+            <button class="signup button" onclick="updateEvent()">Modify</button>
+            <div class="alert" id="update-alert"></div>
+        </div>
+      </section>
+
+
+      <footer class="e_footer">
+        <p><a href="/about.html">About Us</a></p>
+        <p><a href="/contact.html">Contact Us</a></p>
+        <p><a href="/faq.html">FAQ</a></p>
+        <p class="trademark">&copy; Social Event Planner 2022</p>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
