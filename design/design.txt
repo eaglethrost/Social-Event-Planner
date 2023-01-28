@@ -1,0 +1,70 @@
+- Design -
+Initial design:
+    Refer to initial sketches.
+
+General page layout:
+    Basic layout is inspired by Google's search page.
+    The title "Social Event Planner" is placed in the centre of a coloured <header> container that occupies the top section of the page.
+        Clicking on the title on any page (apart from the index page) will redirect the user back to index page or main page if the user is logged in.
+    A coloured <footer> is placed at the bottom of the page (same style as header at top) with centered text links to about, contact and FAQ pages.
+        Clicking on these links will take the user to respective pages.
+
+Index page:
+    This is the starting page.
+    Labelled log in/sign up buttons are placed within the <header> (with the title), in the top-right postion relative to the page.
+        Clicking on these buttons will take the user to another page (depending on which button is pressed).
+    A separate <div> container holds a calendar in the centre of the page.
+
+About/contact/FAQ pages:
+    Additonal basic pages that serve no real function other than site completion.
+
+Log in/sign up pages:
+    These pages are used for to user authorisation.
+    A smaller "Log In"/"Sign Up" (depending on the page) title is shown below the header.
+    Depending on which button was pressed, this page has separate input fields (placed in the centre of the page) to prompt the user to input the appropiate details:
+        Email address/phone
+        Password (hidden)
+    The sign up page has additional fields:
+        Given name
+        Last name
+        Phone number
+        Confirm Password (hidden, checks if it is the same as the entered password)
+    Labelled Log In and Sign Up buttons are placed below the input fields to submit responses or redirect the user to the other page.
+        The second button is present in case the user initally clicks on the wrong button from the index page.
+        A successful sign up will create a new account for the user and log them in.
+        A successful login will take the user to a main calendar page.
+
+Main calendar page:
+    This is the main page of the social event planner (after the index page).
+    The calendar (from Google Calendar API) is placed in the centre and is the main focus/object on the page (similar to MyUni's calendar).
+    A "Create Event +" button is located above and left of the calendar.
+        Clicking on this button that initiates a (vue) pop-up on the same page for the user to fill in details and add the event to the calendar.
+
+User page:
+    This page allows users to view and modify their information.
+    The user's details will be listed down the page.
+    An "Edit" button can be located in the top-left postion (same as create event from the main calendar page).
+        Clicking on this button will turn the details into input fields that the user can then put their changes into. "Submit" will replace "Edit" (button).
+        Clicking on the "Submit" button will submit the any of inputted changes.
+
+Admin page:
+    This page allows admins to manage other users.
+    A table that lists all the users from the database takes up the majority of the page:
+        The list will show the users last name, first name, email address, a "Make Admin" button and a "Delete User" button, in the specified order
+            The "Make Admin" button will make the selected user an admin and grant them access to the admin page.
+            The "Delete User" button will delete the selecter user, all their details and any related data.
+
+- Features -
+(Currently) Planned features:
+    Log in/sign up
+    Create new event
+    Confirm and finalise event time
+    Add finalised event to calendar
+    Manage user information
+
+Admin features:
+    Manage users
+    Sign up other admins
+
+Special feature:
+    Email notifications

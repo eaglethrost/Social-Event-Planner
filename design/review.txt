@@ -1,0 +1,19 @@
+- Review -
+Black text title was hard to see against the green background.
+    -> Changed title to white text
+    -> Made background colour darker
+
+People didn't initially understand what the "+" button was for.
+    -> Button now clearly says "Create Event +"
+
+People accidentally pressed the wrong button (log in/sign up) and could not access the other page.
+    -> Added a sign up button to the log in page
+    -> Added a log in button to the sign up page
+
+People wanted a way to go back to the index page.
+    -> Clicking on the "Social Event Planner" title will now take the user to the index page (if not already on it)
+    (?) Could add another, slightly more obvious way for the user to return to the index page
+
+Calendar seemed a bit small/could be bigger.
+    (?) Could attempt making calendar bigger
+    (?) COuld attempt adding in different view options (such as year/month/week/day)

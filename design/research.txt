@@ -1,0 +1,64 @@
+- Research -
+Apple (iPhone) calendar:
+    An accessible calendar application with fundamental and some optional features to derive our own event planner from.
+    Potentially useful to figure how the event planner might function on non-desktop devices/environments (e.g. mobile phones, tablets... if implemented).
+        e.g. content spacing, scrolling options, possible button positions...
+        A number of buttons are simple and small (takes up less space than text) icons.
+            A plus (+) icon for creating a new event.
+            A magnifying glass icon to access the search feature.
+    Has a "new event" feature that creates a full screen-sized popup.
+        Accessed using a simple "+" button.
+        This page allows the user to input:
+            Basic information: title, location, starts/ends time, short description of event.
+            Option to repeat or make the event into a daily/weekly/annual occurrence.
+            Option to alert or notify the user when the event is soon.
+            Add invitees, which can find contacts from the phone's contact list.
+    Has multiple viewing options for the calendar.
+        Option to show: entire year, one month and one day.
+        Includes buttons and scroll options to navigate to the desired date.
+        Dates with an event/reminder (when viewing by month) are highlighted with a dot. Events are more detailed when viewed on the specific date.
+            Possible alternative for showing events on the calendar without showing too many details.
+        Has an option to show all upcoming events (with their corresponding dates) in a list.
+    Includes a search tool to find certain dates/events.
+    Includes a feature to respond to event invitations theough the phone's integrated email application.
+
+Canvas (MyUni) calendar:
+    Familiar calendar application to draw inspiration from. Includes key features that can be changed to suit an event planner:
+        Features a calendar that spans (most of) the screen.
+        Each date is given a moderately sized box to fit events into.
+        Events are titled clearly on their corresponding dates.
+            Clicking on the event title will create a popup that shows more details about the event.
+    Does not have a create event button, but instead the user can click on the date on the calendar to "edit event" (to add them):
+        Generates a (movable) popup on the page. Input fields: title, date, length of event.
+        Has an "Additional options" button, which extends the popup to show additional input fields to minimise the size of the initial popup.
+    "Events" (assignments) created by other people can appear on the calendars of those they are assigned to. Can be repurposed to let users know of upcoming events they are invited to.
+    Filters can show/hide events according to their assigned category.
+    Includes a smaller calendar that highlights each date with an event.
+    Additional viewing options:
+        Can view event by week (additionally shows time slot details).
+        List format of upcoming events under "Agenda".
+    Includes options to view dates/months in the past or future.
+        Navigated by "<-" and "->" buttons.
+        A "Today" button which takes the user back to the month/week of the current date.
+
+
+Google calendar API:
+    API that will be used in project. Includes a calendar and basic "create event" features.
+
+- Additional Research -
+Google search:
+    Inspiration for index page.
+        Sign in button is located on the top right.
+            Clicking on the button takes the user to a different page to insert credentials.
+        Main title is placed in the middle of the page (as well as search bar).
+        Other, less important buttons placed around the borders/corners and edges of the page.
+        Blank, simple background; little colour is used. Page is overall simple and easy to look at.
+
+Facebook:
+    Alternative inspiration for index page.
+        Instead of having login/register buttons, the input fields are already present on the page (along with "Log in", "Create New Acount" buttons and a "Forgotten Password?" link).
+            Removes the need to create/send users to a separate page.
+        Main title is slightly off-centre (with a bit of flavour text) and input fields are placed next the title.
+            Input fields (and log in button) are made bigger relative to other things on the page.
+        Other, less important buttons are all placed at bottom of the page.
+        Blank, simple background; has some colour (compared to Google search's page) to contrast.
